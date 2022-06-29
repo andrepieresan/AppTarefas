@@ -1,0 +1,17 @@
+---------ROTAS		
+			
+	HOME                         +++ GET
+	HISTORICO          			 +++ GET
+	TAREFAS    					 +++ GET/POST/UPDATE/DELETE
+	
+.................................................................
+               
+
+
+
+----------controllers
+
+
+	HOME -> direciona p historico ou TAREFAS
+	HISTORICO -> findALL p todas as tarefas concluidas
+	TAREFAS -> adicionar e editar titulo, data e hora, observação, e estado (concluido ou nao) 
