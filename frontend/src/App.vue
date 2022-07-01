@@ -1,4 +1,4 @@
-            <script setup>
+<script setup>
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import { RouterLink, RouterView } from 'vue-router'
@@ -57,10 +57,8 @@ import { RouterLink, RouterView } from 'vue-router'
             
             
             .card {
-                width: 100%;
-                margin: auto;
-            
-            
+                width: 90%;
+                margin: auto
             }
             
             .page {
@@ -79,7 +77,7 @@ import { RouterLink, RouterView } from 'vue-router'
             }
             
             .card-body {
-                margin: 2%;
+                margin: 0%;
             }
             </style>
             

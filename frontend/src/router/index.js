@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import tarefasview from '../views/tarefasview.vue'
-import historicoview from '../views/historicoview.vue'
+import tarefasv from '../views/tarefasv.vue'
+import historicov from '../views/historicov.vue'
 
 
 const router = createRouter({
@@ -9,12 +9,12 @@ const router = createRouter({
     {
       path: '/tarefas',
       name: 'tarefas',
-      component: tarefasview
+      component: tarefasv
     }   
     ,{
       path: '/historico',
       name: 'historico',
-      component: historicoview
+      component: historicov
     }
   ]
 })
