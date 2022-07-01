@@ -1,7 +1,3 @@
-<script setup>
-
-
-</script>
 
 <script>
 
@@ -17,7 +13,7 @@ export default {
 
 </script>
 <template>
-    <section class="card" id="card">
+    <BCard class="BCard">
         <div class="row d-flex justify-content-center  h-100">
             <div class="cardd">
                 <table class="table mb-0">
@@ -157,7 +153,7 @@ export default {
                 
         </div>
 
-    </section>
+    </BCard>
     <div id="bt" style="float:right;">
                 <!-- Botão para acionar modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">

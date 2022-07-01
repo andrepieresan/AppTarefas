@@ -1,32 +1,64 @@
-
+<script setup>
+</script>
 <template>
-  <div class="w-full">
-    <ul class="px-0">
-      <li class="border list-none rounded-sm px-3 py-3 cursor-pointer hover:text-white hover:bg-blue-600">
+  <BCard class="BCard">
+    <BListGroup class="bgroup">
+      <BListGroupItem class="blist">
         <div id='atividade' class='clearfix'>
           Atividade
           <div id="stt">
             concluido
           </div>
         </div>
-      </li>
-      <li class="border bg-white list-none rounded-sm px-3 py-3 cursor-pointer hover:text-white hover:bg-blue-600"
-        style='border-bottom-width:5'>List Item 2</li>
-      <li class="border bg-white list-none rounded-sm px-3 py-3 cursor-pointer hover:text-white hover:bg-blue-600"
-        style='border-bottom-width:5'>List item 3</li>
-      <li class="border bg-white list-none rounded-sm px-3 py-3 cursor-pointer hover:text-white hover:bg-blue-600"
-        style='border-bottom-width:5'>List Item 4</li>
-      <li class="border bg-white list-none rounded-sm px-3 py-3 cursor-pointer hover:text-white hover:bg-blue-600">List
-        Item 5</li>
-    </ul>
+      </BListGroupItem>
+       <BListGroupItem class="blist">
+        <div id='atividade' class='clearfix'>
+          Atividade
+          <div id="stt">
+            concluido
+          </div>
+        </div>
+      </BListGroupItem>
+       <BListGroupItem class="blist">
+        <div id='atividade' class='clearfix'>
+          Atividade
+          <div id="stt">
+            concluido
+          </div>
+        </div>
+      </BListGroupItem>
+       <BListGroupItem class="blist">
+        <div id='atividade' class='clearfix'>
+          Atividade
+          <div id="stt">
+            concluido
+          </div>
+        </div>
+      </BListGroupItem>
+    </BListGroup>
+      
+  </BCard>
 
 
-  </div>
 
 </template>
 
 
 <style>
+.bgroup{
+  padding: 0px;
+}
+.blist{
+  margin: 6px;
+  border-radius: 25px;
+  border-style: groove;
+  border-color: black;
+ 
+}
+.BCard{
+  border: none;
+  margin: 50px;
+}
 .modal {
   position: fixed;
   top: 0;
@@ -42,7 +74,9 @@
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
+ul{
 
+}
 #atividade {
   padding: 5px;
   font-size: medium;

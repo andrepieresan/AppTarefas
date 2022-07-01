@@ -1,9 +1,9 @@
 <script setup>
-import '/home/andrep/Desktop/AQUI/desafioDU/frontend/node_modules/bootstrap/dist/css/bootstrap.css';
-
+import { RouterLink, RouterView } from "vue-router";
 </script>
-
-            <template>
+ 
+ <!--
+ <template>
 
     <div class="page">
       
@@ -29,14 +29,41 @@ import '/home/andrep/Desktop/AQUI/desafioDU/frontend/node_modules/bootstrap/dist
         </div>
 
     </div>
+-->
+<template>
+    <div id="app" >
+        <div class="card">
+            <div class="card-header">
 
+                <header>
 
+                    <span class="float-left">
+                        <RouterLink to="/tarefas">Tarefas</RouterLink>
+                        <RouterLink to="/historico">Histórico</RouterLink>
+                    </span>
+                    <span class="float-right">
+                        <i class="fa fa-search" id='icon' aria-hidden="true"></i>
+                    </span>
+                </header>
+            </div>
 
+            <div class="card-body">
+                <RouterView />
 
+            </div>
+        </div>
+
+    </div>
 </template>
- 
+<script>
+export default {
+    name: 'App',
+}
+
+
+</script>
                
-         
+     
          
             <style>
             body {
@@ -79,4 +106,4 @@ import '/home/andrep/Desktop/AQUI/desafioDU/frontend/node_modules/bootstrap/dist
                 margin: 1%;
             }
             </style>
-            
+      
