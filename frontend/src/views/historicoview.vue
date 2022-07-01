@@ -18,9 +18,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 <style>
                                 
-                                body{
-                                    background-color:#000;
-                                }
+                          
                                 
                                 .card {
                                     width: 90%;

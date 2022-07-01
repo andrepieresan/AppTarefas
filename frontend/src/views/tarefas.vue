@@ -121,11 +121,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
 
-	background-color: #eee;
-	font-family: 'Roboto', sans-serif;
-}
 
 .main{
 
