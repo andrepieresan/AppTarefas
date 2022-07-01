@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import tarefasv from '../views/tarefasv.vue'
-import historicov from '../views/historicov.vue'
+import historicov from '../views/historicov.vue'; 
 
 
 const router = createRouter({
@@ -10,8 +10,8 @@ const router = createRouter({
       path: '/tarefas',
       name: 'tarefas',
       component: tarefasv
-    }   
-    ,{
+    }
+    , {
       path: '/historico',
       name: 'historico',
       component: historicov

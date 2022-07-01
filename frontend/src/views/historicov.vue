@@ -1,7 +1,7 @@
 <script setup>
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+
 </script>
 
 <template>
@@ -24,10 +24,17 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
       <li class="border bg-white list-none rounded-sm px-3 py-3 cursor-pointer hover:text-white hover:bg-blue-600">List
         Item 5</li>
     </ul>
+      <div>
+        <b-buton>aaa</b-buton>
+      </div>
+ 
+  
   </div>
+ 
 </template>
 
 <style>
+
 #atividade {
   padding: 5px;
   font-size: medium;

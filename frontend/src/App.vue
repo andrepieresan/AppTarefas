@@ -1,13 +1,13 @@
 <script setup>
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
-import { RouterLink, RouterView } from 'vue-router'
+import '/home/andrep/Desktop/AQUI/desafioDU/frontend/node_modules/bootstrap/dist/css/bootstrap.css'
+
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
             <template>
 
     <div class="page">
-
+      
         <div class="card">
             <div class="card-header">
 
@@ -58,7 +58,7 @@ import { RouterLink, RouterView } from 'vue-router'
             
             .card {
                 width: 90%;
-                margin: auto
+                margin: auto;
             }
             
             .page {
@@ -77,7 +77,7 @@ import { RouterLink, RouterView } from 'vue-router'
             }
             
             .card-body {
-                margin: 0%;
+                margin: 1%;
             }
             </style>
             
