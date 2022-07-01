@@ -12,7 +12,7 @@ export default {
 
         }
     }
-    
+
 }
 
 </script>
@@ -38,7 +38,7 @@ export default {
                                 <span>Call Sam For payments</span>
                             </td>
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
+                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
@@ -55,7 +55,7 @@ export default {
                                 <span>Call Sam For payments</span>
                             </td>
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
+                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
@@ -72,7 +72,7 @@ export default {
                                 <span>Call Sam For payments</span>
                             </td>
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
+                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
@@ -89,7 +89,7 @@ export default {
                                 <span>Call Sam For payments</span>
                             </td>
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
+                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
@@ -106,7 +106,7 @@ export default {
                                 <span>Call Sam For payments</span>
                             </td>
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
+                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
@@ -123,7 +123,7 @@ export default {
                                 <span>Call Sam For payments</span>
                             </td>
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
+                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
@@ -140,7 +140,7 @@ export default {
                                 <span>Call Sam For payments</span>
                             </td>
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
+                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
@@ -149,112 +149,49 @@ export default {
                                         class="fas fa-trash-alt text-danger"></i></a>
                             </td>
                         </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
+                      
                     </tbody>
                 </table>
+                
+            </div>
+                
+        </div>
 
+    </section>
+    <div id="bt" style="float:right;">
+                <!-- Botão para acionar modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                    Adicionar tarefa
+                </button>
 
-                <div class="card-footer text-end p-3">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalaqui">
-                        Launch demo modal
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="modalaqui" tabindex="-1" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Salvar mudanças</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </section>
 </template>
 
 <style>
+#bt{
+    padding-top: 20px;
+}
 #card {
     width: 100%;
 }

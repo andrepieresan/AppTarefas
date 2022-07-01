@@ -1,7 +1,6 @@
 <script setup>
-import '/home/andrep/Desktop/AQUI/desafioDU/frontend/node_modules/bootstrap/dist/css/bootstrap.css'
+import '/home/andrep/Desktop/AQUI/desafioDU/frontend/node_modules/bootstrap/dist/css/bootstrap.css';
 
-import { RouterLink, RouterView } from 'vue-router';
 </script>
 
             <template>
