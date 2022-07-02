@@ -1,16 +1,5 @@
 
-<script>
 
-export default {
-    methods: {
-        saveTask() {
-            let tasks = (localStorage.getItem("tasks")) ? JSON.parse(ocalStorage.getItem("tasks")) : [];
-
-        }
-    }
-}
-
-</script>
 <template>
     <BCard class="BCard">
         <div class="row d-flex justify-content-center  h-100">
@@ -138,10 +127,8 @@ export default {
                                 <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
                             </td>
                             <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
+                                <a href="#!" title="Done"><i class="fas fa-check text-success me-3"></i></a>
+                                <a href="#!" title="Remove"><i class="fas fa-trash-alt text-danger"></i></a>
                             </td>
                         </tr>
 
@@ -153,15 +140,55 @@ export default {
         </div>
 
     </BCard>
-
-    <div >
-        <BButton style='float: right;' v-b-modal="'modal'">Launch demo modal</BButton>
-        <BModal id="modal">helllooo
+ <BButton style='float: right;' v-b-modal="'modal'">Adicionar tarefa</BButton>
+    <div>
+       
+        <BModal id="modal" hideFooter="true">
+            <BForm autocomplete="off">
+                <BFormGroup id="input-group-1" label="Data e horário: " label-for="input-1">
+                    <BFormInput id="input-1" v-model="form.date" placeholder=" Quinta-feira(10/06) ás 13h" required>
+                    </BFormInput>
+                </BFormGroup>
+                <BFormGroup id="input-group-2" label="Descrição:" v-model="form.desc" label-for="input-2">
+                    <BFormInput id="input-2" placeholder="Ex.: levar o pet na veterinaria" required></BFormInput>
+                </BFormGroup>
+                <BFormGroup id="input-group-3" label="Status:" label-for="input-3">
+                    <BFormSelect id="input-3" v-model="form.status"
+                        :options="[{ text: 'Status', value: null }, 'Concluida', 'Pendente']" required></BFormSelect>
+                </BFormGroup>
+            </BForm>
+                <div style="float: none; margin-left: 176px;" >
+                 <BButton style=" margin: 10px;" @click="saveTask" type="submit">Salvar</BButton>
+                </div>
+           
         </BModal>
     </div>
 
 </template>
+<script>
 
+export default {
+    name: 'Form',
+    data() {
+        return {
+            form: {
+                date: '',
+                desc: ''
+            }
+        }
+    },
+    methods: {
+        saveTask() {
+            let tasks = (localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : [];
+            tasks.push(this.form);
+            localStorage.setItem("tasks", tasks)
+            this.$router.push({ name: "tarefas" })
+           
+        }
+    }
+}
+
+</script>
 <style>
 #bt {
     padding-top: 20px;
