@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        factory(Task::class)->create({
+            'date' => '22/06 as 19h', 'task' => 'suiahuashus', 'status' => 'true'
+        })
     }
 }
+ 
