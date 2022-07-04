@@ -2,24 +2,32 @@
 
 use Illuminate\Support\Facades\Route;
 use backend\app\Models\Task;
+use App\Http\Controllers\TaskController;
+
+
 
 Route::get('/home', function () {
     return view('welcome');
 });
+Route::get('/tarefas', [TaskController::class, 'marcadas']);
+
+Route::post('/tarefas', [TaskController::class, 'criar']);
+
+Route::get('/historico', [TaskController::class, 'todas']);
+
+
+
+/*
 Route::prefix('/')->group(function () {
-    Route::get('', function () {
-        return 'paginas de todas as tarefas marcadas';
-    });
    
-    Route::post('', function () {
-        return console.log('post de tarefas online');
-    });
+
     Route::get('historico', function () {
         return "get historico tarefas ja concluidas";
     });
+
     Route::get('geral', function(){
         return "tarefas concluidas e marcadas";
     });
     
    
-});
+});*/
