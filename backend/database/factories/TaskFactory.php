@@ -10,9 +10,9 @@ class TaskFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array
+     * @return void
      */
-    public function definition()
+    public function run()
     {
         return [
             'data' => $this->faker->date(),

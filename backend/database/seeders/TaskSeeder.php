@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Seeder;
-use \App\Models\Task;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 class TaskSeeder extends Seeder
 {
@@ -14,6 +14,9 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Task::factory()->count(10)->create();
+        DB::table('Task')->insert([
+            factory() ->count(10)->create()
+        ]);
+        //\App\Models\Task::factory()->count(10)->create();
     }
 }
