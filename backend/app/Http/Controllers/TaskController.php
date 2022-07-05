@@ -12,17 +12,15 @@ class TaskController extends Controller
 {   
     
     public function todas(){
-        $tasks = DB::table('Task')->orderBy('data', 'asc')->get();
+        $tasks = DB::table('Task')->get();
        return dd($tasks);
     }
 
     public function marcadas(){
-        $tasks = DB::table('Task')->where('status','false')->get();
-        return $tasks;
+        $tasks = DB::table('Task')->where('status','false')-> orderBy('data', 'asc')->get();
+        return dd($tasks);
     }
-    public function update(){
-        $update = DB::table('Task')->where('');
-    }
+   
     public function criar(Task $task){
        $task= Task::create([
         'data' => '', 'horario' => '', 'assunto' => '', 'descricao' => '', 'status' => ''
