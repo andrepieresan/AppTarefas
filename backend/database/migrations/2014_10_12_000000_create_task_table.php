@@ -20,7 +20,6 @@ class CreateTaskTable extends Migration
             $table->string('assunto');
             $table->string('descricao');
             $table->boolean('status');
-            $table->timestamps();
         });
     }
 

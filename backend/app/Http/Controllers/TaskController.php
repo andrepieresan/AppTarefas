@@ -5,6 +5,8 @@ use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Eloquent;
 use Illuminate\Support\Facades\DB;
+use \home\andrep\Desktop\AQUI\desafioDU\backend\app\Http\Requests\TaskRequest;
+use App\Models\Flight;
 
 class TaskController extends Controller
 {   
@@ -16,19 +18,23 @@ class TaskController extends Controller
 
     public function marcadas(){
         $tasks = DB::table('Task')->where('status','false')->get();
-        return dd($tasks);
+        return $tasks;
     }
-    
-    public function criar(Request $request){
-        $nova = DB::table('Task')->insert([
-        'id' =>'22',
-        'data'=>'30/02', 
-        'horario'=>'11:20',
-        'assunto'=>'comprar racao',
-        'descricao'=>'powkoakpokaopwk',
-        'status'=>'true',
-        ]);
-        return dd($nova);
+    public function update(){
+        $update = DB::table('Task')->where('');
+    }
+    public function criar(Task $task){
+       $task= Task::create([
+        'data' => '', 'horario' => '', 'assunto' => '', 'descricao' => '', 'status' => ''
+       ]);
+        
+        //$task = new Task;
+
+       // $task->data = $request->data;
+
+       // $task->create();
+
+        return dd($task);
         
     }
     
