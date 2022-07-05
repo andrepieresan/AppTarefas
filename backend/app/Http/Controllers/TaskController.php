@@ -20,6 +20,10 @@ class TaskController extends Controller
         $tasks = DB::table('Task')->where('status','false')-> orderBy('data', 'asc')->get();
         return dd($tasks);
     }
+    public function concluidas(){
+        $tasks = DB::table('Task')->where('status','true')-> orderBy('data', 'asc')->get();
+        return dd($tasks);
+    }
    
     public function criar(Task $task){
        $task= Task::create([

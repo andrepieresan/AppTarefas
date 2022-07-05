@@ -9,9 +9,13 @@ use App\Http\Controllers\TaskController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/tarefas', [TaskController::class, 'marcadas']);
+Route::prefix('/tarefas')->group(function (){
+    Route::get('', [TaskController::class, 'marcadas']);
 
-Route::post('/tarefas', [TaskController::class, 'criar']);
+    Route::post('', [TaskController::class, 'criar']);
+
+    Route::get('concluidas', [TaskController::class, 'concluidas']);
+});
 
 Route::get('/historico', [TaskController::class, 'todas']);
 

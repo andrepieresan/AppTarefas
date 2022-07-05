@@ -8,7 +8,7 @@
 
     </head>
     <body>
-        <h3>USE /tarefas e /historico na url</h3>
+        <h3>USE /tarefas(GET E POST) ou         /tarefas/concluidas(GET) e             /historico(GET) na url</h3>
         
     </body>
 </html>
