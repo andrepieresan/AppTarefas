@@ -1,9 +1,10 @@
 
 
 <template>
-    <div v-for="(task, index) in tasks" :key="index" >
-        <BCard class="BCard">
-            <div class="row d-flex justify-content-center  h-100">
+
+    <BCard class="BCard">
+        <div >
+            <div class="">
                 <table class="table mb-0">
                     <thead>
                         <tr>
@@ -11,65 +12,52 @@
                             <th scope="col">Titulo</th>
                             <th scope="col">Descrição</th>
                             <th scope="col">Status</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">{{task.data}} </span>
-                            </th>
-                             <td class="align-middle">
-                                <span>{{task.title}}</span>
-                            </td>
-                            <td class="align-middle">
-                                <span>{{task.desc}}</span>
+                        <tr v-for="(task, index) in tasks" :key="index" class="">
+                            <td>
+                                <span class="">{{ task.date }} </span>
                             </td>
                             <td class="">
-                                <h6 class="mb-0"><span class="badge bg-danger">{{task.status}}</span></h6>
+                                <span>{{ task.title }}</span>
+                            </td>
+                            <td class="">
+                                <span>{{ task.desc }}</span>
+                            </td>
+                            <td class="">
+                                <h6 class="mb-0"><span class="badge bg-danger">{{ task.status }}</span></h6>
                             </td>
                             <td class="align-middle">
                                 <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
                                         class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
+                                <BButton @click="edit(index)">Editar</BButton>
                             </td>
                         </tr>
-                       
+
                     </tbody>
                 </table>
-                
-               
+
+
 
             </div>
+        </div>
+    </BCard>
 
-        </BCard>
-    </div>
-    <BButton style='float: right;' v-b-modal="'modal'">Adicionar tarefa</BButton>
+
+    
+   
+
+
+
+
+
+    <BButton style='float: right;' to="/criar">Adicionar tarefa</BButton>
     <div>
 
         <BModal id="modal" hideFooter=true>
-            <BForm autocomplete="off">
-                <BFormGroup id="input-group-1" label="Data e horário: " label-for="input-1">
-                    <BFormInput id="input-1" v-model="form.date" placeholder=" Quinta-feira(10/06) ás 13h" required>
-                    </BFormInput>
-                </BFormGroup>
-                  <BFormGroup id="input-group-4" label="Assunto:" label-for="input-4">
-                    <BFormInput id="input-4" v-model="form.title" placeholder="Ex.:Ir ao supermercado" required>
-                    </BFormInput>
-                </BFormGroup>
-                <BFormGroup id="input-group-2" label="Descrição:" label-for="input-2">
-                    <BFormInput id="input-2" v-model="form.desc" placeholder="Ex.: comprar arroz, feijão, batata e picanha">
-                    </BFormInput>
-                </BFormGroup>
-                <BFormGroup id="input-group-3" label="Status:" label-for="input-3">
-                    <BFormSelect id="input-3" v-model="form.status"
-                        :options="[{ text: '', value: null }, 'Concluida', 'Pendente']" required></BFormSelect>
-                </BFormGroup>
-            </BForm>
-            <div style="float: none; margin-left: 176px;">
-                <BButton style=" margin: 10px;" @click="saveTask" type="submit">Salvar</BButton>
-            </div>
+
 
         </BModal>
     </div>
@@ -80,29 +68,21 @@
 
 
 export default {
-    name: 'Form',
+    name: 'List',
     data() {
         return {
-            tasks:[],
+            tasks: [],
 
-            form: {
-                title: '',
-                date: '',
-                desc: '',
-                status: ''
-            }
+          
         }
     },
-    created(){
+    created() {
         this.tasks = (localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : [];
 
     },
     methods: {
-        saveTask() {
-            let tasks = (localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : [];
-            tasks.push(this.form);
-            localStorage.setItem("tasks", JSON.stringify(tasks))
-            this.$router.push({ name: "tarefas" })
+        edit(index) {
+            this.$router.push({ name: "criar", params: { index } })
 
         }
     }
