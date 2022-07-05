@@ -31,107 +31,7 @@
                                         class="fas fa-trash-alt text-danger"></i></a>
                             </td>
                         </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" data-mdb-toggle="tooltip" title="Done"><i
-                                        class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove"><i
-                                        class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="fw-normal">
-                            <th>
-                                <span class="ms-2">XX/XX </span>
-                            </th>
-                            <td class="align-middle">
-                                <span>Call Sam For payments</span>
-                            </td>
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger">á fazer</span></h6>
-                            </td>
-                            <td class="align-middle">
-                                <a href="#!" title="Done"><i class="fas fa-check text-success me-3"></i></a>
-                                <a href="#!" title="Remove"><i class="fas fa-trash-alt text-danger"></i></a>
-                            </td>
-                        </tr>
-
+                       
                     </tbody>
                 </table>
 
@@ -143,18 +43,18 @@
  <BButton style='float: right;' v-b-modal="'modal'">Adicionar tarefa</BButton>
     <div>
        
-        <BModal id="modal" hideFooter="true">
+        <BModal id="modal" hideFooter=true>
             <BForm autocomplete="off">
                 <BFormGroup id="input-group-1" label="Data e horário: " label-for="input-1">
                     <BFormInput id="input-1" v-model="form.date" placeholder=" Quinta-feira(10/06) ás 13h" required>
                     </BFormInput>
                 </BFormGroup>
-                <BFormGroup id="input-group-2" label="Descrição:" v-model="form.desc" label-for="input-2">
-                    <BFormInput id="input-2" placeholder="Ex.: levar o pet na veterinaria" required></BFormInput>
+                <BFormGroup id="input-group-2" label="Descrição:"  label-for="input-2">
+                    <BFormInput id="input-2" v-model="form.desc" placeholder="Ex.: levar o pet na veterinaria" required></BFormInput>
                 </BFormGroup>
                 <BFormGroup id="input-group-3" label="Status:" label-for="input-3">
                     <BFormSelect id="input-3" v-model="form.status"
-                        :options="[{ text: 'Status', value: null }, 'Concluida', 'Pendente']" required></BFormSelect>
+                        :options="[{ text: '', value: null }, 'Concluida', 'Pendente']" required></BFormSelect>
                 </BFormGroup>
             </BForm>
                 <div style="float: none; margin-left: 176px;" >
@@ -167,13 +67,16 @@
 </template>
 <script>
 
+
+
 export default {
     name: 'Form',
     data() {
         return {
             form: {
                 date: '',
-                desc: ''
+                desc: '',
+                status:''
             }
         }
     },
@@ -181,7 +84,7 @@ export default {
         saveTask() {
             let tasks = (localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : [];
             tasks.push(this.form);
-            localStorage.setItem("tasks", tasks)
+            localStorage.setItem("tasks", JSON.stringify(tasks))
             this.$router.push({ name: "tarefas" })
            
         }
