@@ -9,6 +9,9 @@ use App\Http\Controllers\TaskController;
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::match(['get', 'post'], '/tarefas', function () {});
+
+
 Route::prefix('/tarefas')->group(function (){
     Route::get('', [TaskController::class, 'marcadas']);
 
