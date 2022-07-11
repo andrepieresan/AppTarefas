@@ -25,10 +25,17 @@ class TaskController extends Controller
         return dd($tasks);
     }
    
-    public function criar(Task $task){
-       $task= Task::create([
-        'data' => '', 'horario' => '', 'assunto' => '', 'descricao' => '', 'status' => ''
-       ]);
+    public function store(){
+       $task= DB::table('Task')-> insert([
+        ['data' => '13-02', 'horario' => '14h', 'assunto' => 'cccccc', 'descricao' => 'iiiiiii', 'status' => 'false'],
+    
+        ['data' => '14-03', 'horario' => '16h', 'assunto' => 'ssss', 'descricao' => 'ibbbbbbbbbbbbb', 'status' => 'false'],
+        ['data' => '09-05', 'horario' => '13h', 'assunto' => 'ccdddddfcccc', 'descricao' => 'immmmmmm', 'status' => 'false'],
+        ['data' => '4-09', 'horario' => '11h', 'assunto' => 'cccsdafasdfasfccc', 'descricao' => 'illllllllll', 'status' => 'false'],
+        ['data' => '09-11', 'horario' => '13h', 'assunto' => 'jjjjjjjj', 'descricao' => 'yyyyyyyyyy', 'status' => 'true'],
+        ['data' => '04-01', 'horario' => '17h', 'assunto' => 'ooooooo', 'descricao' => 'kkkkkkkkkk', 'status' => 'true']
+    
+    ]);
         
         //$task = new Task;
 

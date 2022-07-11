@@ -15,7 +15,7 @@ Route::get('/', function () {
 Route::prefix('/tarefas')->group(function (){
     Route::get('', [TaskController::class, 'marcadas']);
 
-    Route::post('', [TaskController::class, 'criar']);
+    Route::post('', [TaskController::class, 'store']);
 
     Route::get('concluidas', [TaskController::class, 'concluidas']);
 });
