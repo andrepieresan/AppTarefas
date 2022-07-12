@@ -11,40 +11,35 @@ use App\Models\Flight;
 class TaskController extends Controller
 {   
     
-    public function todas(){
+     function todas(){
         $tasks = DB::table('Task')->get();
        return dd($tasks);
     }
 
-    public function marcadas(){
+     function marcadas(){
         $tasks = DB::table('Task')->where('status','false')-> orderBy('data', 'asc')->get();
         return dd($tasks);
     }
-    public function concluidas(){
+     function concluidas(){
         $tasks = DB::table('Task')->where('status','true')-> orderBy('data', 'asc')->get();
         return dd($tasks);
     }
    
-    public function store(){
-       $task= DB::table('Task')-> insert([
-        ['data' => '13-02', 'horario' => '14h', 'assunto' => 'cccccc', 'descricao' => 'iiiiiii', 'status' => 'false'],
-    
-        ['data' => '14-03', 'horario' => '16h', 'assunto' => 'ssss', 'descricao' => 'ibbbbbbbbbbbbb', 'status' => 'false'],
-        ['data' => '09-05', 'horario' => '13h', 'assunto' => 'ccdddddfcccc', 'descricao' => 'immmmmmm', 'status' => 'false'],
-        ['data' => '4-09', 'horario' => '11h', 'assunto' => 'cccsdafasdfasfccc', 'descricao' => 'illllllllll', 'status' => 'false'],
-        ['data' => '09-11', 'horario' => '13h', 'assunto' => 'jjjjjjjj', 'descricao' => 'yyyyyyyyyy', 'status' => 'true'],
-        ['data' => '04-01', 'horario' => '17h', 'assunto' => 'ooooooo', 'descricao' => 'kkkkkkkkkk', 'status' => 'true']
-    
-    ]);
+     function store(Request $request){
         
-        //$task = new Task;
-
-       // $task->data = $request->data;
-
-       // $task->create();
-
-        return dd($task);
+        $task = $request->all();
         
+      //  $request = DB::table('Task')->insertUsing(['data', 'horario', 'assunto', 'descricao', 'status']);
+
+
+        
+     /*$request= DB::table('Task')-> insertUsing([
+        ['data', 'horario', 'assunto', 'descricao', 'status']
+        
+    ]);      
+*/
+
+            return dd($task);
     }
     
 
