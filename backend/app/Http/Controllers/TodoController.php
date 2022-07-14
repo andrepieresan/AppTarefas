@@ -48,7 +48,7 @@ class TodoController extends Controller
     {
         $todo->delete();
 
-        return response()->status(204);
+        return response()->json(null, 204);
     }
 
     public function toggleCompleted(Todo $todo)
