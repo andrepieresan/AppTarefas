@@ -110,7 +110,13 @@
                 </div>
             </div>
             <div class="col-auto">
-                <button type="button" class="btn btn-sm btn-danger">x</button>
+                <button
+                    type="button"
+                    class="btn btn-sm btn-danger"
+                    @click="remove(task)"
+                >
+                    x
+                </button>
             </div>
         </div>
     </div>
@@ -216,6 +222,16 @@ export default {
                     this.task = "";
                     this.tasks.push({ id, task, completed });
                 });
+        },
+
+        remove(task) {
+            if (confirm("Please, confirm task deletion?")) {
+                api.delete(`/${task.id}`).then(() => {
+                    this.tasks = this.tasks.filter(
+                        (item) => item.id !== task.id
+                    );
+                });
+            }
         },
     },
 
