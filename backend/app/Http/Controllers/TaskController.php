@@ -11,33 +11,35 @@ use App\Models\Flight;
 class TaskController extends Controller
 {   
     
-    public function todas(){
+     function todas(){
         $tasks = DB::table('Task')->get();
        return dd($tasks);
     }
 
-    public function marcadas(){
+     function marcadas(){
         $tasks = DB::table('Task')->where('status','false')-> orderBy('data', 'asc')->get();
         return dd($tasks);
     }
-    public function concluidas(){
+     function concluidas(){
         $tasks = DB::table('Task')->where('status','true')-> orderBy('data', 'asc')->get();
         return dd($tasks);
     }
    
-    public function criar(Task $task){
-       $task= Task::create([
-        'data' => '', 'horario' => '', 'assunto' => '', 'descricao' => '', 'status' => ''
-       ]);
+     function store(Request $request){
         
-        //$task = new Task;
-
-       // $task->data = $request->data;
-
-       // $task->create();
-
-        return dd($task);
+        $task = $request->all();
         
+      //  $request = DB::table('Task')->insertUsing(['data', 'horario', 'assunto', 'descricao', 'status']);
+
+
+        
+     /*$request= DB::table('Task')-> insertUsing([
+        ['data', 'horario', 'assunto', 'descricao', 'status']
+        
+    ]);      
+*/
+
+            return dd($task);
     }
     
 
