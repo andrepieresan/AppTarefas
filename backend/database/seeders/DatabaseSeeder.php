@@ -1,10 +1,12 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,8 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $this->call([
-        TaskSeeder::class
-       ]);
+        $this->call([
+            // TaskSeeder::class,
+            TodoSeeder::class,
+        ]);
     }
 }
